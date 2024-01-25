@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Images/ball.png" type="image/x-icon" />
+    <title>Hockey's Club</title>
+
+    <!-- DaisyUI Khala CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind Mama CDN Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fontawesome cdn link----- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom Tailwind style color config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FF4240',
+              primarybg: '#131318',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Style -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+      body,
+      .t-style-primary {
+        font-family: 'Manrope', sans-serif;
+      }
+      .duration {
+        transition: 0.3s;
+      }
+      .radial-progress.text-red-600,
+      .radial-progress.text-emerald-400,
+      .radial-progress.text-amber-400,
+      .radial-progress.text-blue-600 {
+        --size: 8rem;
+        transform: rotate(146deg);
+      }
+
+      .program-one {
+        background: linear-gradient(
+            rgba(19, 19, 24, 0.5),
+            rgba(19, 19, 24, 0.5)
+          ),
+          url('./Images/batbol.png');
+      }
+      .program-two {
+        background: linear-gradient(
+            rgba(19, 19, 24, 0.5),
+            rgba(19, 19, 24, 0.5)
+          ),
+          url('./Images/manbat.png');
+      }
+      .program-three {
+        background: linear-gradient(
+            rgba(19, 19, 24, 0.5),
+            rgba(19, 19, 24, 0.5)
+          ),
+          url('./Images/orange-white-playing.png');
+      }
+    </style>
+  </head>
+  <body class="t-style-primary">
+    <div class="w-[95%] md:w-11/12 xl:w-5/6 max-w-[1500px] m-auto">
+      <!-- Start Header section -->
+      <header class="my-12">
+        <div
+          class="navbar flex items-center flex-col sm:flex-row sm:justify-between bg-base-100 bg-white"
+        >
+          <div
+            class="navbar-start flex items-center flex-row-reverse justify-between w-full sm:w-auto sm:flex-row"
+          >
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7 rotate-180 sm:rotate-0 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 ml-[-140px] sm:ml-0 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base font-normal text-primarybg bg-white text-[#424247] border-primary border-2"
+              >
+                <li class="bg-none hover:text-primary">
+                  <a href="#" class="text-primary">Home</a>
+                </li>
+                <li class="hover:text-primary">
+                  <a href="#">About</a>
+                </li>
+                <li class="hover:text-primary">
+                  <a href="#">Page</a>
+                </li>
+                <li class="hover:text-primary">
+                  <a href="#">Blog</a>
+                </li>
+                <li class="hover:text-primary">
+                  <a href="#">Contact</a>
+                </li>
+                <div
+                  class="w-full duration bg-primary hover:bg-white py-1 text-center rounded-lg border-2 border-primary text-xl font-bold text-white hover:text-primary"
+                >
+                  <a href="#">Get Ticket</a>
+                </div>
+              </ul>
+            </div>
+            <a
+              href="#"
+              class="btn-ghost text-primarybg poppins text-3xl sm:text-4xl font-bold px-0 hover:bg-white"
+              >Hockey<span class="text-primary">’</span>s</a
+            >
+          </div>
+          <div class="navbar-center">
+            <div class="navbar-center hidden lg:flex">
+              <ul
+                class="menu menu-horizontal px-1 text-base font-normal text-[#424247]"
+              >
+                <li class="bg-none hover:text-primary">
+                  <a href="#" class="text-primary duration-200 hover:scale-110">Home</a>
+                </li>
+                <li class="hover:text-primary duration-200 hover:scale-110">
+                  <a href="#">About</a>
+                </li>
+                <li class="hover:text-primary duration-200 hover:scale-110">
+                  <a href="#">Page</a>
+                </li>
+                <li class="hover:text-primary duration-200 hover:scale-110">
+                  <a href="#">Blog</a>
+                </li>
+                <li class="hover:text-primary duration-200 hover:scale-110">
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden sm:block transic">
+            <a href="#" class="text-[#424247] pr-6"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+            <a
+              href="#"
+              class="duration bg-primary border-2 border-primary text-xl font-bold sm:text-lg px-6 py-2 rounded-lg sm:px-6 text-white hover:bg-white hover:text-primary"
+              >Get Ticket</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- Main section one start for banner design -->
+        <section class="w-full">
+          <div class="carousel w-full h-[200px] sm:h-[550px]">
+            <!-- Slider One -->
+            <div
+              id="slide1"
+              class="carousel-item w-full rounded-2xl bg-[url('./Images/bannar.png')] bg-cover bg-center flex items-end justify-center sm:justify-between"
+            >
+              <div class="flex gap-4 m-2 sm:m-5">
+                <a
+                  href="#slide4"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❮</a
+                >
+                <a
+                  href="#slide2"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❯</a
+                >
+              </div>
+              <div
+                class="p-7 space-y-4 w-[560px] bg-primarybg rounded-2xl m-5 hidden sm:block"
+              >
+                <h2 class="text-2xl font-extrabold text-white">
+                  Meet all the heroes from the field
+                </h2>
+                <p>
+                  Unite champions across domains, from scientists to activists,
+                  cultivating a force for positive change, embodying resilience,
+                  innovation, and compassion.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slider Two -->
+            <div
+              id="slide2"
+              class="carousel-item w-full rounded-2xl bg-[url('./Images/batbol.png')] bg-cover bg-center flex items-end justify-center sm:justify-between"
+            >
+              <div class="flex gap-4 m-2 sm:m-5">
+                <a
+                  href="#slide1"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❮</a
+                >
+                <a
+                  href="#slide3"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❯</a
+                >
+              </div>
+              <div
+                class="p-7 space-y-4 w-[560px] bg-primarybg rounded-2xl m-5 hidden sm:block"
+              >
+                <h2 class="text-2xl font-extrabold text-white">
+                  Meet all the heroes from the field
+                </h2>
+                <p>
+                  Unite champions across domains, from scientists to activists,
+                  cultivating a force for positive change, embodying resilience,
+                  innovation, and compassion.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slider Three -->
+            <div
+              id="slide3"
+              class="carousel-item w-full rounded-2xl bg-[url('./Images/slidetwo.webp')] bg-cover bg-center flex items-end justify-center sm:justify-between"
+            >
+              <div class="flex gap-4 m-2 sm:m-5">
+                <a
+                  href="#slide2"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❮</a
+                >
+                <a
+                  href="#slide4"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❯</a
+                >
+              </div>
+              <div
+                class="p-7 space-y-4 w-[560px] bg-primarybg rounded-2xl m-5 hidden sm:block"
+              >
+                <h2 class="text-2xl font-extrabold text-white">
+                  Meet all the heroes from the field
+                </h2>
+                <p>
+                  Unite champions across domains, from scientists to activists,
+                  cultivating a force for positive change, embodying resilience,
+                  innovation, and compassion.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slider Fore -->
+            <div
+              id="slide4"
+              class="carousel-item w-full rounded-2xl bg-[url('./Images/slidefore.webp')] bg-cover bg-center flex items-end justify-center sm:justify-between"
+            >
+              <div class="flex gap-4 m-2 sm:m-5">
+                <a
+                  href="#slide3"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❮</a
+                >
+                <a
+                  href="#slide1"
+                  class="btn btn-circle scale-75 sm:scale-100 hover:bg-white hover:text-primary hover:scale-110"
+                  >❯</a
+                >
+              </div>
+              <div
+                class="p-7 space-y-4 w-[560px] bg-primarybg rounded-2xl m-5 hidden sm:block"
+              >
+                <h2 class="text-2xl font-extrabold text-white">
+                  Meet all the heroes from the field
+                </h2>
+                <p>
+                  Unite champions across domains, from scientists to activists,
+                  cultivating a force for positive change, embodying resilience,
+                  innovation, and compassion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Hidden sub one section -->
+        <section class="sm:hidden">
+          <div class="p-7 space-y-4 mt-5 bg-primarybg rounded-2xl w-full">
+            <h2 class="text-lg font-extrabold text-white">
+              Meet all the heroes from the field
+            </h2>
+            <p class="text-sm text-white">
+              Unite champions across domains, from scientists to activists,
+              cultivating a force for positive change, embodying resilience,
+              innovation, and compassion.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section Two for Radio Progress -->
+        <section class="py-24">
+          <div
+            class="space-y-6 py-8 mb-12 border-t-[1px] border-b-[1px] border-dashed border-[#13131233]"
+          >
+            <h1
+              class="text-center text-2xl sm:text-4xl font-extrabold text-primarybg"
+            >
+              Professional Hockeys Club
+            </h1>
+            <p class="text-[#13131299] max-w-[610px] text-center m-auto">
+              Elite athletes on ice, a professional hockey club embodies skill,
+              teamwork, and the pursuit of victory, captivating fans worldwide.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-4 md:grid-rows-1 justify-around gap-4"
+          >
+            <div class="max-w-64 m-auto">
+              <div class="text-center">
+                <div
+                  class="radial-progress text-red-600"
+                  style="--value: 87"
+                  role="progressbar"
+                >
+                  <h2 class="text-[28px] font-extrabold -rotate-[-212deg]">
+                    87%
+                  </h2>
+                </div>
+              </div>
+              <h3 class="text-primarybg text-xl font-semibold text-center py-4">
+                Prayer Facility
+              </h3>
+              <p class="text-center text-[#13131299] text-base font-normal">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+            <div class="max-w-64 m-auto">
+              <div class="text-center">
+                <div
+                  class="radial-progress text-emerald-400"
+                  style="--value: 95"
+                  role="progressbar"
+                >
+                  <h1 class="text-[28px] font-extrabold -rotate-[-212deg]">
+                    95%
+                  </h1>
+                </div>
+              </div>
+              <h3 class="text-primarybg text-xl font-semibold text-center py-4">
+                Prayer Facility
+              </h3>
+              <p class="text-center text-[#13131299] text-base font-normal">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+            <div class="max-w-64 m-auto">
+              <div class="text-center">
+                <div
+                  class="radial-progress text-amber-400"
+                  style="--value: 90"
+                  role="progressbar"
+                >
+                  <h1 class="text-[28px] font-extrabold -rotate-[-212deg]">
+                    90%
+                  </h1>
+                </div>
+              </div>
+              <h3 class="text-primarybg text-xl font-semibold text-center py-4">
+                Prayer Facility
+              </h3>
+              <p class="text-center text-[#13131299] text-base font-normal">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+            <div class="max-w-64 m-auto">
+              <div class="text-center">
+                <div
+                  class="radial-progress text-blue-600"
+                  style="--value: 80"
+                  role="progressbar"
+                >
+                  <h1 class="text-[28px] font-extrabold -rotate-[-212deg]">
+                    80%
+                  </h1>
+                </div>
+              </div>
+              <h3 class="text-primarybg text-xl font-semibold text-center py-4">
+                Prayer Facility
+              </h3>
+              <p class="text-center text-[#13131299] text-base font-normal">
+                Amet consectetur. Condimentum dignissim adipiscing .
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Three for Program Lessons -->
+        <section>
+          <div
+            class="space-y-6 py-8 mb-12 border-t-[1px] border-b-[1px] border-dashed border-[#13131233]"
+          >
+            <h1
+              class="text-center text-2xl sm:text-4xl font-extrabold text-primarybg"
+            >
+              Program Lessons
+            </h1>
+            <p class="text-[#13131299] max-w-[610px] text-center m-auto">
+              Program lessons cover variables, control structures, functions,
+              data types. Emphasize problem-solving, algorithms, and coding
+              principles. Promote effective programming practices.
+            </p>
+          </div>
+
+          <div
+            class="lg:h-[800px] grid gap-6 grid-cols-1 lg:grid-cols-2 grid-rows-3 lg:grid-rows-7"
+          >
+            <div
+              class="flex items-center sm:items-end p-6 sm:p-10 program-one bg-cover bg-center lg:row-span-3 rounded-2xl"
+            >
+              <div class="space-y-3 sm:space-y-5">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                  Junior Program
+                </h2>
+                <p
+                  class="text-sm sm:text-base font-medium text-white sm:leading-[26px] max-w-[525px]"
+                >
+                  Junior program introduces coding basics: variables, loops,
+                  conditions. Emphasizes problem-solving, logical thinking.
+                  Builds foundation for advanced concepts. Fosters creativity
+                  and collaboration in programming projects.
+                </p>
+                <button
+                  class="rounded-lg text-base sm:text-xl px-4 sm:px-6 py-2 bg-primary text-white font-bold hover:translate-x-4 duration-200"
+                >
+                  Register Now!
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex items-center sm:items-end p-6 sm:p-10 program-two bg-cover bg-center lg:row-span-3 rounded-2xl"
+            >
+              <div class="space-y-3 sm:space-y-5">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                  Teenager Program
+                </h2>
+                <p
+                  class="text-sm sm:text-base font-medium text-white sm:leading-[26px] max-w-[525px]"
+                >
+                  Junior program introduces coding basics: variables, loops,
+                  conditions. Emphasizes problem-solving, logical thinking.
+                  Builds foundation for advanced concepts. Fosters creativity
+                  and collaboration in programming projects.
+                </p>
+                <button
+                  class="rounded-lg text-base sm:text-xl px-4 sm:px-6 py-2 bg-primary text-white font-bold hover:translate-x-4 duration-200"
+                >
+                  Register Now!
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex items-end p-6 sm:p-10 program-three bg-cover bg-center lg:col-span-2 lg:row-span-4 rounded-2xl"
+            >
+              <div class="space-y-3 sm:space-y-5">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+                  Professional Program
+                </h2>
+                <p
+                  class="text-sm sm:text-base font-medium text-white sm:leading-[26px] max-w-[525px]"
+                >
+                  Junior program introduces coding basics: variables, loops,
+                  conditions. Emphasizes problem-solving, logical thinking.
+                  Builds foundation for advanced concepts. Fosters creativity
+                  and collaboration in programming projects.
+                </p>
+                <button
+                  class="rounded-lg text-base sm:text-xl px-4 sm:px-6 py-2 bg-primary text-white font-bold hover:translate-x-4 duration-200"
+                >
+                  Register Now!
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Fore for New Products -->
+        <section class="py-24">
+          <!-- Product heading -->
+          <div
+            class="space-y-6 py-8 border-t-[1px] border-b-[1px] border-dashed border-[#13131233]"
+          >
+            <h1
+              class="text-center text-2xl sm:text-4xl font-extrabold text-primarybg"
+            >
+              Our New Products
+            </h1>
+            <p class="text-[#13131299] max-w-[610px] text-center m-auto">
+              Introducing our innovative new products! Elevate your experience
+              with cutting-edge design, advanced features, and unparalleled
+              performance. Discover excellence in every detail. Upgrade today!
+            </p>
+          </div>
+
+          <!-- Product details -->
+
+          <div class="pt-12 space-y-6">
+            <div
+              class="max-w-80 sm:max-w-[640px] lg:max-w-max flex flex-col lg:flex-row gap-5 xl:gap-6 m-auto"
+            >
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 xl:gap-5 border boreder border-[#1313181A] rounded-2xl px-5 xl:px-6 py-[22px]"
+              >
+                <div class="w-full sm:w-52">
+                  <img
+                    class="w-full sm:hidden"
+                    src="Images/s_d/1.png"
+                    alt=""
+                  />
+                  <img
+                    class="w-full hidden sm:block"
+                    src="Images/red_dress.png"
+                    alt=""
+                  />
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center gap-2 text-base text-[#13131880]"
+                  >
+                    <p class="font-medium">
+                      <i class="fa-solid fa-star text-[#F99808]"></i> 5.0
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-eye"></i> 20
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-heart"></i> 200
+                    </p>
+                  </div>
+                  <h1 class="text-primarybg text-xl font-extrabold">
+                    Red Hudi Dress
+                  </h1>
+                  <p class="font-medium text-base">
+                    Embrace elegance in the stunning red Hudi dress. Unleash
+                    confidence
+                  </p>
+                  <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center gap-2"
+                  >
+                    <h3 class="text-primary font-extrabold text-lg">
+                      Price - $22.00
+                    </h3>
+                    <p>
+                      <i class="fa-solid fa-cart-shopping"> </i> Delivery Fee :
+                      Free
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 xl:gap-5 border boreder border-[#1313181A] rounded-2xl px-5 xl:px-6 py-[22px]"
+              >
+                <div class="w-full sm:w-52">
+                  <img
+                    class="w-full sm:hidden"
+                    src="Images/s_d/2.png"
+                    alt=""
+                  />
+                  <img
+                    class="w-full hidden sm:block"
+                    src="Images/green-kijano.png"
+                    alt=""
+                  />
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center gap-2 text-base text-[#13131880]"
+                  >
+                    <p class="font-medium">
+                      <i class="fa-solid fa-star text-[#F99808]"></i> 5.0
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-eye"></i> 20
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-heart"></i> 200
+                    </p>
+                  </div>
+                  <h1 class="text-primarybg text-xl font-extrabold">
+                    Green Football
+                  </h1>
+                  <p class="font-medium text-base">
+                    Embrace elegance in the stunning red Hudi dress. Unleash
+                    confidence
+                  </p>
+                  <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center gap-2"
+                  >
+                    <h3 class="text-primary font-extrabold text-lg">
+                      Price - $22.00
+                    </h3>
+                    <p>
+                      <i class="fa-solid fa-cart-shopping"> </i> Delivery Fee :
+                      Free
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="max-w-80 sm:max-w-[640px] lg:max-w-max flex flex-col lg:flex-row gap-5 xl:gap-6 m-auto"
+            >
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 xl:gap-5 border boreder border-[#1313181A] rounded-2xl px-5 xl:px-6 py-[22px]"
+              >
+                <div class="w-full sm:w-52">
+                  <img
+                    class="w-full sm:hidden"
+                    src="Images/s_d/3.png"
+                    alt=""
+                  />
+                  <img
+                    class="w-full hidden sm:block"
+                    src="Images/yollow cap.png"
+                    alt=""
+                  />
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center gap-2 text-base text-[#13131880]"
+                  >
+                    <p class="font-medium">
+                      <i class="fa-solid fa-star text-[#F99808]"></i> 5.0
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-eye"></i> 20
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-heart"></i> 200
+                    </p>
+                  </div>
+                  <h1 class="text-primarybg text-xl font-extrabold">
+                    Yollow Premium Cap
+                  </h1>
+                  <p class="font-medium text-base">
+                    Embrace elegance in the stunning red Hudi dress. Unleash
+                    confidence
+                  </p>
+                  <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center gap-2"
+                  >
+                    <h3 class="text-primary font-extrabold text-lg">
+                      Price - $22.00
+                    </h3>
+                    <p>
+                      <i class="fa-solid fa-cart-shopping"> </i> Delivery Fee :
+                      Free
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 xl:gap-5 border boreder border-[#1313181A] rounded-2xl px-5 xl:px-6 py-[22px]"
+              >
+                <div class="w-full sm:w-52">
+                  <img
+                    class="w-full sm:hidden"
+                    src="Images/s_d/4.png"
+                    alt=""
+                  />
+                  <img
+                    class="w-full hidden sm:block"
+                    src="Images/jurrsy.png"
+                    alt=""
+                  />
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center gap-2 text-base text-[#13131880]"
+                  >
+                    <p class="font-medium">
+                      <i class="fa-solid fa-star text-[#F99808]"></i> 5.0
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-eye"></i> 20
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-heart"></i> 200
+                    </p>
+                  </div>
+                  <h1 class="text-primarybg text-xl font-extrabold">
+                    Cricket Jurrsy Dress
+                  </h1>
+                  <p class="font-medium text-base">
+                    Embrace elegance in the stunning red Hudi dress. Unleash
+                    confidence
+                  </p>
+                  <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center gap-2"
+                  >
+                    <h3 class="text-primary font-extrabold text-lg">
+                      Price - $22.00
+                    </h3>
+                    <p>
+                      <i class="fa-solid fa-cart-shopping"> </i> Delivery Fee :
+                      Free
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="max-w-80 sm:max-w-[640px] lg:max-w-max flex flex-col lg:flex-row gap-5 xl:gap-6 m-auto"
+            >
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 xl:gap-5 border boreder border-[#1313181A] rounded-2xl px-5 xl:px-6 py-[22px]"
+              >
+                <div class="w-full sm:w-52">
+                  <img
+                    class="w-full sm:hidden"
+                    src="Images/s_d/5.png"
+                    alt=""
+                  />
+                  <img
+                    class="w-full hidden sm:block"
+                    src="Images/helmet.png"
+                    alt=""
+                  />
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center gap-2 text-base text-[#13131880]"
+                  >
+                    <p class="font-medium">
+                      <i class="fa-solid fa-star text-[#F99808]"></i> 5.0
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-eye"></i> 20
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-heart"></i> 200
+                    </p>
+                  </div>
+                  <h1 class="text-primarybg text-xl font-extrabold">
+                    Green Bike Helmet
+                  </h1>
+                  <p class="font-medium text-base">
+                    Embrace elegance in the stunning red Hudi dress. Unleash
+                    confidence
+                  </p>
+                  <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center gap-2"
+                  >
+                    <h3 class="text-primary font-extrabold text-lg">
+                      Price - $22.00
+                    </h3>
+                    <p>
+                      <i class="fa-solid fa-cart-shopping"> </i> Delivery Fee :
+                      Free
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row items-center gap-4 xl:gap-5 border boreder border-[#1313181A] rounded-2xl px-5 xl:px-6 py-[22px]"
+              >
+                <div class="w-full sm:w-52">
+                  <img
+                    class="w-full sm:hidden"
+                    src="Images/s_d/6.png"
+                    alt=""
+                  />
+                  <img
+                    class="w-full hidden sm:block"
+                    src="Images/ball.png"
+                    alt=""
+                  />
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center gap-2 text-base text-[#13131880]"
+                  >
+                    <p class="font-medium">
+                      <i class="fa-solid fa-star text-[#F99808]"></i> 5.0
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-eye"></i> 20
+                    </p>
+                    <p class="font-medium">
+                      <i class="fa-regular fa-heart"></i> 200
+                    </p>
+                  </div>
+                  <h1 class="text-primarybg text-xl font-extrabold">
+                    White Premium Football
+                  </h1>
+                  <p class="font-medium text-base">
+                    Embrace elegance in the stunning red Hudi dress. Unleash
+                    confidence
+                  </p>
+                  <div
+                    class="flex flex-col sm:flex-row items-start sm:items-center gap-2"
+                  >
+                    <h3 class="text-primary font-extrabold text-lg">
+                      Price - $22.00
+                    </h3>
+                    <p>
+                      <i class="fa-solid fa-cart-shopping"> </i> Delivery Fee :
+                      Free
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Five for Clients Question -->
+        <section>
+          <div
+            class="space-y-6 py-8 border-t-[1px] border-b-[1px] border-dashed border-[#13131233]"
+          >
+            <h1
+              class="text-center text-2xl sm:text-4xl font-extrabold text-primarybg"
+            >
+              Clients Question
+            </h1>
+            <p class="text-[#13131299] max-w-[610px] text-center m-auto">
+              Explore common queries from our clients in this insightful
+              section, addressing concerns and providing valuable information
+              for a seamless experience.
+            </p>
+          </div>
+
+          <div
+            class="border border-[#1313181A] border-solid rounded-2xl mt-12 p-5 md:p-8 flex flex-col lg:flex-row gap-3 max-w-[600px] lg:max-w-max m-auto"
+          >
+            <div
+              class="lg:w-[1000px] lg:bg-[url('Images/qustionmark.png')] bg-cover bg-center rounded-2xl"
+            >
+              <img class="w-full lg:hidden" src="Images/s_d/sms.png" alt="" />
+            </div>
+
+            <div class="ml-auto">
+              <div
+                class="collapse collapse-plus bg-base-200 bg-white text-primarybg"
+              >
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-medium">
+                  <h2 class="text-primarybg text-xl font-bold">
+                    Our Equipment
+                  </h2>
+                </div>
+                <div class="collapse-content">
+                  <p
+                    class="text-base font-normal text-[#13131899] w-full md:w-11/12"
+                  >
+                    Our equipment boasts cutting-edge technology, ensuring
+                    efficiency and reliability. From advanced machinery to
+                    innovative tools and client satisfaction in every aspect.
+                  </p>
+                </div>
+              </div>
+              <hr class="text-[#1313181A] ml-4" />
+              <div
+                class="collapse collapse-plus bg-base-200 bg-white text-primarybg"
+              >
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">
+                  <h2 class="text-primarybg text-xl font-bold">
+                    Hockey Training
+                  </h2>
+                </div>
+                <div class="collapse-content">
+                  <p
+                    class="text-base font-normal text-[#13131899] w-full md:w-11/12"
+                  >
+                    Certainly! Please provide more details or clarify your
+                    request so I can assist you accurately.
+                  </p>
+                </div>
+              </div>
+              <hr class="text-[#1313181A] ml-4" />
+              <div
+                class="collapse collapse-plus bg-base-200 bg-white text-primarybg"
+              >
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">
+                  <h2 class="text-primarybg text-xl font-bold">
+                    Private Lessons
+                  </h2>
+                </div>
+                <div class="collapse-content">
+                  <p
+                    class="text-base font-normal text-[#13131899] w-full md:w-11/12"
+                  >
+                    Certainly! Please provide more details or clarify your
+                    request so I can assist you accurately.
+                  </p>
+                </div>
+              </div>
+              <hr class="text-[#1313181A] ml-4" />
+              <div
+                class="collapse collapse-plus bg-base-200 bg-white text-primarybg"
+              >
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">
+                  <h2 class="text-primarybg text-xl font-bold">Ski Touring</h2>
+                </div>
+                <div class="collapse-content">
+                  <p
+                    class="text-base font-normal text-[#13131899] w-full md:w-11/12"
+                  >
+                    Certainly! Please provide more details or clarify your
+                    request so I can assist you accurately.
+                  </p>
+                </div>
+              </div>
+              <hr class="text-[#1313181A] ml-4" />
+              <div
+                class="collapse collapse-plus bg-base-200 bg-white text-primarybg"
+              >
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">
+                  <h2 class="text-primarybg text-xl font-bold">Booking</h2>
+                </div>
+                <div class="collapse-content">
+                  <p
+                    class="text-base font-normal text-[#13131899] w-full md:w-11/12"
+                  >
+                    Certainly! Please provide more details or clarify your
+                    request so I can assist you accurately.
+                  </p>
+                </div>
+              </div>
+              <hr class="text-[#1313181A] ml-4" />
+              <div
+                class="collapse collapse-plus bg-base-200 bg-white text-primarybg"
+              >
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-medium">
+                  <h2 class="text-primarybg text-xl font-bold">Pricings</h2>
+                </div>
+                <div class="collapse-content">
+                  <p
+                    class="text-base font-normal text-[#13131899] w-full md:w-11/12"
+                  >
+                    Certainly! Please provide more details or clarify your
+                    request so I can assist you accurately.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Six for contact Form -->
+        <section class="py-24">
+          <div
+            class="space-y-6 py-8 border-t-[1px] border-b-[1px] border-dashed border-[#13131233]"
+          >
+            <h1
+              class="text-center text-2xl sm:text-4xl font-extrabold text-primarybg"
+            >
+              Get In Touch
+            </h1>
+            <p class="text-[#13131299] max-w-[610px] text-center m-auto">
+              Elite athletes on ice, a professional hockey club embodies skill,
+              teamwork, and the pursuit of victory, captivating fans worldwide.
+            </p>
+          </div>
+
+          <div class="my-12 flex flex-col lg:flex-row gap-6 items-center">
+            <div
+              class="w-full lg:w-2/5 lg:min-w-[390px] min-w-min p-4 md:p-7 rounded-2xl border border-solid border-[#1313181A] grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-1 grid-rows-3 md:grid-rows-2 lg:grid-rows-3"
+            >
+              <div
+                class="w-full lg:w-[335px] mx-auto bg-[#BCED6D1A] p-5 md:p-8 rounded-2xl"
+              >
+                <img class="w-12 h-12" src="Images/call.png" alt="" />
+                <p class="text-base font-normal text-[#13131866]">
+                  Phone Number
+                </p>
+                <h3 class="text-lg font-extrabold text-primarybg">
+                  (+62) 123-321-543
+                </h3>
+              </div>
+              <div
+                class="w-full lg:w-[335px] mx-auto bg-[#FDDD5F1A] p-5 md:p-8 rounded-2xl"
+              >
+                <img class="w-12 h-12" src="Images/sms.png" alt="" />
+                <p class="text-base font-normal text-[#13131866]">Email</p>
+                <h3 class="text-lg font-extrabold text-primarybg">
+                  hockeys@support.com
+                </h3>
+              </div>
+              <div
+                class="col-span-1 md:col-span-2 lg:col-span-1 w-full md:w-[335px] mx-auto bg-[#629CF31A] p-5 md:p-8 rounded-2xl"
+              >
+                <img class="w-12 h-12" src="./Images/map.png" alt="" />
+                <p class="text-base font-normal text-[#13131866]">Location</p>
+                <h3 class="text-lg font-extrabold text-primarybg">
+                  152/1 Mohakhali Wireless Gate
+                </h3>
+              </div>
+            </div>
+            <div class="w-full lg:w-[70%]">
+              <form>
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                  <div>
+                    <label for="" class="text-xl font-bold text-primarybg"
+                      >Your Name</label
+                    >
+                    <input
+                      type="text"
+                      id="fname"
+                      name="fname"
+                      required
+                      placeholder="Enter your full name"
+                      class="w-full bg-[#13131808] rounded-md py-2 px-3 focus:outline outline-1 focus:outline-primary"
+                    />
+                  </div>
+                  <div>
+                    <label for="" class="text-xl font-bold text-primarybg"
+                      >Your Email</label
+                    >
+                    <input
+                      type="email"
+                      id="fname"
+                      required
+                      name="fname"
+                      placeholder="Enter your email"
+                      class="w-full bg-[#13131808] rounded-md py-2 px-3 focus:outline outline-1 focus:outline-primary"
+                    />
+                  </div>
+                  <div>
+                    <label for="" class="text-xl font-bold text-primarybg"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      id="fname"
+                      name="fname"
+                      required
+                      placeholder="Enter your subject"
+                      class="w-full bg-[#13131808] rounded-md py-2 px-3 focus:outline outline-1 focus:outline-primary"
+                    />
+                  </div>
+                  <div>
+                    <label for="" class="text-xl font-bold text-primarybg"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="number"
+                      id="fname"
+                      name="fname"
+                      required
+                      placeholder="Enter your phone number"
+                      class="w-full bg-[#13131808] rounded-md py-2 px-3 focus:outline outline-1 focus:outline-primary"
+                    />
+                  </div>
+                  <div class="md:col-span-2">
+                    <label for="" class="text-xl font-bold text-primarybg"
+                      >Message</label
+                    >
+                    <textarea
+                      name="message"
+                      required
+                      rows="12"
+                      cols=""
+                      placeholder="Write your message"
+                      class="w-full h-48 md:h-auto border bg-[#13131808] border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-primary"
+                    ></textarea>
+                  </div>
+                  <div class="md:col-span-2">
+                    <button
+                      type="submit"
+                      class="py-3 text-base font-medium rounded-lg text-white bg-primary w-full hover:bg-[#13131808] border-2 border-primary hover:border-primary transition duration-300 hover:text-primary"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="w-full p-8 bg-[#13131808] rounded-xl space-y-4">
+            <h3 class="text-center text-primarybg text-2xl font-extrabold">
+              Social Media
+            </h3>
+            <div
+              class="flex items-center justify-center gap-4 text-primarybg text-2xl"
+            >
+              <a href="#">
+                <i
+                  class="fa-brands fa-twitter hover:text-primary duration-200 hover:scale-125"
+                ></i>
+              </a>
+              <a href="#">
+                <i
+                  class="fa-brands fa-facebook-f hover:text-primary duration-200 hover:scale-125"
+                ></i
+              ></a>
+              <a href="#">
+                <i
+                  class="fa-brands fa-instagram hover:text-primary duration-200 hover:scale-125"
+                ></i
+              ></a>
+              <a href="#">
+                <i
+                  class="fa-brands fa-github hover:text-primary duration-200 hover:scale-125"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Start Footer Section -->
+
+    <footer class="w-full bg-primarybg text-white pt-24 pb-12">
+      <div
+        class="w-[95%] md:w-11/12 xl:w-5/6 max-w-[1500px] m-auto grid grid-cols-2 md:grid-cols-5 grid-rows-3 md:grid-rows-1 text-center md:text-left"
+      >
+        <div class="col-span-2">
+          <h2 class="text-[28px] font-extrabold">Get In Touch</h2>
+          <p
+            class="max-w-[345px] py-4 text-base text-[#FFFFFF99] font-medium m-auto md:m-0"
+          >
+            Reach out to us for expert support, inquiries, and personalized
+            assistance. Your satisfaction is our priority!
+          </p>
+          <p class="text-base text-[#FFFFFFCC] font-medium">
+            <i class="fa-regular fa-envelope text-primary"></i>
+            hockeys@support.com
+          </p>
+          <p class="text-base text-[#FFFFFFCC] font-medium">
+            <i class="fa-solid fa-phone-volume text-primary"></i> (+62) 123-321-543
+          </p>
+        </div>
+        <div class="space-y-8">
+          <h3 class="text-lg font-bold">Company</h3>
+          <div
+            class="flex flex-col gap-4 text-base text-[#FFFFFF99] font-medium"
+          >
+            <a class="hover:text-primary duration-200" href="#">About us</a>
+            <a class="hover:text-primary duration-200" href="#">Leadership</a>
+            <a class="hover:text-primary duration-200" href="#">Careers</a>
+            <a class="hover:text-primary duration-200" href="#"
+              >News & Article</a
+            >
+            <a class="hover:text-primary duration-200" href="#">Legal Notice</a>
+          </div>
+        </div>
+        <div class="space-y-8">
+          <h3 class="text-lg font-bold">Support</h3>
+          <div
+            class="flex flex-col gap-4 text-base text-[#FFFFFF99] font-medium"
+          >
+            <a class="hover:text-primary duration-200" href="#">Help Center</a>
+            <a class="hover:text-primary duration-200" href="#">FAQ</a>
+            <a class="hover:text-primary duration-200" href="#"
+              >Ticket Support</a
+            >
+            <a class="hover:text-primary duration-200" href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="space-y-8 col-span-2 md:col-span-1 mt-5 md:m-0">
+          <h3 class="text-lg font-bold">Services</h3>
+          <div
+            class="flex flex-col gap-4 text-base text-[#FFFFFF99] font-medium"
+          >
+            <a class="hover:text-primary duration-200" href="#">Academy</a>
+            <a class="hover:text-primary duration-200" href="#">Group Lesson</a>
+            <a class="hover:text-primary duration-200" href="#"
+              >Private Lesson</a
+            >
+            <a class="hover:text-primary duration-200" href="#"
+              >Hockeys for kids</a
+            >
+            <a class="hover:text-primary duration-200" href="#"
+              >Hockeys for Adult</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
